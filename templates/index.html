@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ethereum Blockchain Explorer</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+<body>
+<img
+        src="../static/images/Eth_Logo.png"
+        alt="Ethereum Logo"
+        class="center"
+/>
+<h1> Ethereum Blockchain Explorer </h1>
+
+<div class="form-container">
+    <form action="/process_form" method="POST">
+        <label for="inputField">Enter Transaction ID</label>
+        <input type="text" id="inputField" name="inputField"/>
+        <br/>
+        <button type="submit" class="submit-button">Submit</button>
+
+    </form>
+</div>
+
+<table>
+    <th>Parameter</th>
+    <th>Details</th>
+    <tr>
+        <td>Connection Status</td>
+        <td>{{ connection }}</td>
+    </tr>
+    <tr>
+        <td>Latest Block Number</td>
+        <td>{{ block }}</td>
+    </tr>
+    <tr>
+        <td>Latest Block Timestamp</td>
+        <td>{{ latest_block.timestamp }}</td>
+    </tr>
+</table>
+
+</body>
+
+</html>
